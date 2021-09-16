@@ -1,47 +1,8 @@
+{% extends "All.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link href="{% static "css/MainPage/style.css" %}" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-</head>
-<body>
+{% block all %}
 <div class="wrapper">
-    <header>
-        <div class="_container header__container">
-            <a href="">
-                <img src="{% static "img/imgonline-com-ua-Resize-sNwZ7uU0Hxxw17wV.png" %}" alt="" class="header__logo">
-            </a>
-            <nav class="h-menu">
-                <ul class="h-menu__list">
-                    <li class="h-menu__item">
-                        <a href="" class="h-menu__link">Главная</a>
-                    </li>
-                    <li class="h-menu__item">
-                        <a href="" class="h-menu__link">Цветы</a>
-                    </li>
-                    <li class="h-menu__item">
-                        <a href="" class="h-menu__link">О нас</a>
-                    </li>
-                    <li class="h-menu__item">
-                        <a href="" class="h-menu__link">Контакты</a>
-                    </li>
-                    <li class="h-menu__item" style="display: flex;align-items: center">
-                        <a href="" class="h-menu__link">
-                            Корзина
-                        </a>
-                    </li>
-
-                </ul>
-            </nav>
-
-        </div>
-    </header>
+    {% include "Header.html" %}
     <main class="">
         <div class="block1">
             <div class="block1__container _container">
@@ -77,40 +38,7 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer__container _container">
-            <a href="">
-                <img src="{% static "img/imgonline-com-ua-Resize-sNwZ7uU0Hxxw17wV.png" %}" alt="" class="footer__logo">
-            </a>
-            <nav class="f-menu">
-                <ul class="f-menu__list">
-                    <li class="f-menu__item"><a href="" class="f-menu__link">Контакты</a></li>
-                    <li class="f-menu__item"><a href="" class="f-menu__link">О нас</a></li>
-                    <li class="f-menu__item"><a href="" class="f-menu__link">Поддержка</a></li>
-                </ul>
-            </nav>
-             <div class="f-menu-links">
-                <ul class="f-m-links__list">
-                    <li class="f-m-links__item">
-                        <a href="" class="f-m-links__link">
-                            <img src="{% static "img/free-icon-instagram-733558 1 (1).svg" %}" alt="" class="f-m-links__img">
-                        </a>
-                    </li>
-                    <li class="f-m-links__item">
-                        <a href="" class="f-m-links__link">
-                            <img src="{% static "img/telegram 1 (1).svg" %}" alt="" class="f-m-links__img">
-                        </a>
-                    </li>
-                    <li class="f-m-links__item">
-                        <a href="" class="f-m-links__link">
-                            <img src="{% static "img/facebook 1 (1).svg" %}" alt="" class="f-m-links__img">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
+    {% include "Footer.html" %}
 </div>
-</body>
-</html>
+{% endblock all %}
+

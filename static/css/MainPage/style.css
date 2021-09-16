@@ -37,9 +37,12 @@ h6 {
     font-weight: inherit;
     font-size: inherit;
 }
-
+body{
+    overflow-y: scroll;
+}
 html,
 body {
+
     background-color: white;
     height: 100%;
     line-height: 1;
@@ -51,9 +54,9 @@ body {
 
 .wrapper {
     min-height: 100%;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+
 
 }
 
@@ -109,7 +112,7 @@ header {
 }
 
 .h-menu {
-    margin-left: 3%;
+    margin-left: 5%;
 }
 
 .h-menu__list {
@@ -157,6 +160,7 @@ header {
     }
 
 }
+
 @media (max-width: 467px) {
 
 
@@ -398,7 +402,7 @@ footer {
 }
 
 .f-menu-links {
-    margin-left: 11%;
+    margin-left: 7%;
 }
 
 .f-m-links__list {

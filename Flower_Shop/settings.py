@@ -30,7 +30,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "About.apps.AboutConfig",
+    "Bucket.apps.BucketConfig",
+    "Contacts.apps.ContactsConfig",
     "MainPage.apps.MainpageConfig",
+    "FLowers.apps.FlowersConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
