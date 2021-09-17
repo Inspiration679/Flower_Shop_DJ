@@ -1,10 +1,44 @@
 {% extends "All.html" %}
 {% load static %}
 {% block all %}
-<div class="wrapper">
-    {% include "Header.html" %}
-    <main></main>
-    {% include "Footer.html" %}
-</div>
+    <div class="wrapper">
+        {% include "Header.html" %}
+        <main>
+            <div class="block1">
+                <div class="block1__container _container">
+                    <div class="block1__body">
+                        <ul class="block1__list">
+                            <li class="block1__item"
+                            ><a href="" class="block1__link">Цвет</a>
+                            </li>
+                            <li class="block1__item">
+                                <a href="" class="block1__link">Цена</a>
+                            </li>
+                            <li class="block1__item">
+                                <a href="" class="block1__link">Название</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="block2">
+                <div class="block2__container _container">
+                    <div class="block2__body">
+                        {% for flower in flowers.all %}
+                            <a href="{% url "show_necessary_flower" flower.id %}">
+                                <div class="block2__item">
+                                    <div class="block2__itm-content">
+                                        <img src="{{ flower.flower_image.url }}" alt="" class="block2__itm-img">
+                                        <p class="block2__itm-p">{{ flower.flower_title }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include "Footer.html" %}
+    </div>
 {% endblock all %}
 
