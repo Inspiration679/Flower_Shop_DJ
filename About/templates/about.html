@@ -1,0 +1,37 @@
+{% extends "head_body.html" %}
+{% load static %}
+{% block all %}
+    <div class="wrapper">
+        {% include "header.html" %}
+        <main>
+            <div class="main-block">
+                <div class="main-block__container _container">
+                    <div class="main-block__body">
+                        <div class="about-block">
+                            <h1 class="about-block__h">
+                                О нас
+                            </h1>
+                            <p class="about-block__p">
+                                Пример текстаПример текстаПример текстаПример текстаПример текстаПример текста
+                                Пример текстаПример текстаПример текстаПример текстаПример текстаПример текстаПример
+                                текстаПример текстаПример текстаПример текстаПример текста
+                                м
+                            </p>
+                        </div>
+                        <div class="address-block">
+                            <h1 class="address-block__h">Адрес</h1>
+                            <p class="address-block__p">Адрес</p>
+                        </div>
+                        <div class="map-block">
+                            <h1 class="map-block__h">Карта</h1>
+                            <div id="mapid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include "footer.html" %}
+    </div>
+    <script src="../static/js/app.js"></script>
+{% endblock all %}
+
