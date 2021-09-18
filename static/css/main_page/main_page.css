@@ -1,5 +1,4 @@
 
-
 .block1 {
 
     position: relative;
@@ -7,21 +6,20 @@
 }
 
 .block1__container {
+    padding-bottom: 165px;
+    padding-top: 306px;
+    text-align: center;
 
 }
 
 .block1__body {
-
-
     position: relative;
     z-index: 2;
     max-width: 968px;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 306px 0px 165px 0px;
-    margin-left: 100px;
 
 
 }
@@ -134,11 +132,13 @@
 }
 
 .block2__container {
+    padding-top: 99px;
+    padding-bottom: 64px;
 
 }
 
 .block2__body {
-    padding: 99px 0 67px 0;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
