@@ -1,0 +1,38 @@
+{% extends "head_body.html" %}
+{% load static %}
+{% block all %}
+    <div class="wrapper">
+        {% include "header.html" %}
+        <main>
+            <div class="main-block">
+                <div class="main-block__container _container">
+                    <div class="main-block__body">
+                        <div class="main-block__text">
+                            <h1 class="main-block__h">Контакты</h1>
+                            <ul class="main-block__list">
+                                <li class="main-block__item">
+                                    Email: <a href="" class="main-block__a">Почта</a>
+                                </li>
+                                <li class="main-block__item">
+                                    Телефон: +380661549132
+                                </li>
+                                <li class="main-block__item">
+                                    Telegram: <a href="" class="main-block__a">Телеграм</a>
+                                </li>
+                                <li class="main-block__item">
+                                    Instagram: <a href="" class="main-block__a">Инстаграм</a>
+                                </li>
+                                <li class="main-block__item">
+                                    Facebook: <a href="" class="main-block__a">Фейсбук</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <img src="{% static "img/Group 13 (1).svg" %}" alt="" class="main-block__image">
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include "footer.html" %}
+    </div>
+{% endblock all %}
+

@@ -140,7 +140,7 @@ header {
 }
 
 .h-menu__link {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
@@ -216,7 +216,7 @@ footer {
 }
 
 .f-menu__link {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
