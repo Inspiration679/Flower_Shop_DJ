@@ -1,0 +1,76 @@
+
+header {
+    background: linear-gradient(#000000, #ffffff);
+    border-bottom: 2px solid black;
+    position: relative;
+}
+
+.main-block__container {
+    padding-top: 3.41%;
+    padding-bottom: 10.59%;
+    text-align: center;
+
+
+}
+
+.main-block__body {
+    display: inline-block;
+    color: black;
+    max-width: 981px;
+    text-align: left;
+    font-family: Montserrat;
+
+}
+
+.main-block__body p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 126%;
+
+}
+
+.main-block__body h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 122%;
+
+}
+
+.about-block {
+    margin-bottom: 8.56%;
+
+}
+
+.about-block__h {
+
+}
+
+.about-block__p {
+
+}
+
+.address-block {
+    margin-bottom: 8.56%;
+
+}
+
+.address-block__h {
+
+}
+
+.address-block__p {
+
+}
+.map-block{
+
+}
+.main-block__h{
+
+}
+
+#mapid {
+    width: 100%;
+    height: 374px;
+}
