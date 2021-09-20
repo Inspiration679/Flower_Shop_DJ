@@ -1,0 +1,166 @@
+/* ----Header------------------------------------------------------------------------ */
+header {
+    background: linear-gradient(#000000, #ffffff);
+    border-bottom: 2px solid black;
+    position: relative;
+}
+
+/* ----Block1------------------------------------------------------------------------ */
+.block1 {
+
+}
+
+.block1__container {
+    padding-top: 2.92%;
+
+
+}
+
+.block1__body {
+    max-width: 470px;
+    margin: 0 auto;
+
+
+}
+
+.block1__list {
+
+    display: flex;
+
+
+}
+
+.block1__item:not(:last-child) {
+    margin-right: 48%;
+
+}
+
+.block1__link_active {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 123%;
+    color: black;
+    border-bottom: black solid 2px;
+
+}
+
+.block1__link_inactive {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 123%;
+    color: #EFEFEF;
+    border: black;
+
+
+}
+
+@media (max-width: 467px) {
+    .block1__link_active {
+        font-size: 16px;
+    }
+
+    .block1__link_inactive {
+        font-size: 16px;
+    }
+
+}
+
+/* ----Block2------------------------------------------------------------------------ */
+.block2__container {
+    padding-top: 4%;
+    padding-bottom: 8%;
+}
+
+.block2__body {
+    overflow: hidden;
+    font-family: Montserrat;
+    max-width: 807px;
+    margin-left: 12%;
+
+}
+
+.block2 p {
+    font-size: 26px;
+    line-height: 32px;
+    max-width: 180px;
+    width: 180px;
+    text-align: right;
+    margin-right: 24px;
+    color: #000000;
+}
+
+.block2 input {
+    outline: none;
+    border-bottom: black 1px solid;
+    max-width: 670px;
+    font-size: 26px;
+    line-height: 123%;
+    width: 100%;
+    color: #000000;
+}
+
+.block2 li {
+    display: flex;
+
+}
+
+.block2 li:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+
+.block2__login_active {
+
+}
+
+.block2__login_inactive {
+    display: none;
+
+}
+
+.login__button {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 116%;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 60px;
+    font-family: "Roboto";
+    background: #EFEFEF;
+}
+
+.block2__registration_active {
+
+
+}
+
+.block2__registration_inactive {
+    display: none;
+
+}
+
+.registration
+__button {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 116%;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 60px;
+    font-family: "Roboto";
+    background: #EFEFEF;
+}

@@ -25,4 +25,5 @@ urlpatterns = [
     path("",views.ShowMainPage,name="Home"),
     path('products/', include("Products.urls")),
     path("about/",include("About.urls")),
+    path("sign/",include("Login_Registration.urls"))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

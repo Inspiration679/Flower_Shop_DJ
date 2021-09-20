@@ -13,4 +13,4 @@ def showProducts(request):
 def ShowNecessaryProduct(request, product_id):
     page = get_object_or_404(Products, pk=product_id)
     return render(request, "product_page.html",
-                  {"product_info": page, "path": "css/products/product_page.css", "all_path": "css/head_body.css", })
+                  {"product_info": page, "path": "css/products/product_page.css", })

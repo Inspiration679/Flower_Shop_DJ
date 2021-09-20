@@ -13,3 +13,20 @@ var marker = L.marker([50.020757888009605, 32.983711780001094]).addTo(mymap);
 marker.bindPopup("<b>Карта!</b><br>Местоположение").openPopup();
 circle.bindPopup("I am a circle.");
 polygon.bindPopup("I am a polygon.");
+
+function showRegistration() {
+
+    document.querySelector("#log").classList.add('block2__login_inactive');
+    document.querySelector('#reg').classList.remove('block2__registration_inactive');
+    document.querySelector("#log_click").classList.add('block1__link_inactive');
+    document.querySelector('#reg_click').classList.remove('block1__link_inactive');
+    document.querySelector("#reg_click").classList.add('block1__link_active');
+}
+
+function showLogin() {
+
+    document.querySelector("#reg").classList.add('block2__registration_inactive');
+    document.querySelector('#log').classList.remove('block2__login_inactive');
+    document.querySelector("#reg_click").classList.add('block1__link_inactive');
+    document.querySelector('#log_click').classList.remove('block1__link_inactive');
+}
