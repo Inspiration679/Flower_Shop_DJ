@@ -1,0 +1,36 @@
+{% extends "sign.html" %}
+
+{% load static %}
+{% block content %}
+    <style>
+        .class1 {
+            border-bottom: 1px solid black;
+            color: black;
+        }
+    </style>
+    <form method="post" action="{% url "show_sign_in" %}">
+        {% csrf_token %}
+
+        <ul class="block2__login" id="log">
+            <li class="block2__input">
+                <p>Username:</p>
+                {{ sign_in.username }}
+            </li>
+            <li class="block2__input">
+                <p>Password:</p>
+                {{ sign_in.password }}
+            </li>
+            <li class="block__input">
+                <button class="login__button" name="log_form">Войти</button>
+            </li>
+            <p style="color: red">{{ login.errors }}</p>
+        </ul>
+
+    </form>
+{% endblock content %}
+
+
+
+
+
+

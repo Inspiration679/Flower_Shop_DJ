@@ -1,0 +1,37 @@
+{% extends "sign.html" %}
+{% load static %}
+{% block content %}
+    <style>
+        .class2 {
+            border-bottom: 1px solid black;
+            color: black;
+        }
+    </style>
+    <form method="post" action="{% url "show_sign_up" %}">
+        {% csrf_token %}
+        <ul class="block2__registration" id="reg">
+            <li class="block2__input">
+                <p>Логин:</p>
+                {{ sign_up.username }}
+            </li>
+            <li class="block2__input">
+                <p>Пароль:</p>
+                {{ sign_up.password }}
+            </li>
+            <li class="block2__input">
+                <p>Пароль:</p>
+                {{ sign_up.password2 }}
+            </li>
+            <li class="block2__input">
+                <p>Почта:</p>
+                {{ sign_up.email }}
+            </li>
+
+            <li class="block__input">
+                <button class="registration__button" name="reg_form">Регистрация</button>
+            </li>
+            <p style="color: red">{{ sign_up.errors }}</p>
+        </ul>
+
+    </form>
+{% endblock content %}
