@@ -2,37 +2,64 @@
 <header>
 
     <div class="_container header__container">
-        <a href="">
+        <a href="{% url "show_home" %}">
             <img src="{% static "img/Logo.png" %}" alt="" class="header__logo">
         </a>
         <nav class="h-menu">
             <ul class="h-menu__list">
-                <li class="h-menu__item">
-                    <a href="{% url "Home" %}" class="h-menu__link">Главная</a>
+
+                <li class="h-menu__item" id="home">
+                    <a href="{% url "show_home" %}" class="h-menu__link">Главная</a>
                 </li>
-                <li class="h-menu__item hi ">
+
+                <li class="h-menu__item " id="products" >
                     <a href="{% url 'show_products' %}" class="h-menu__link ">Цветы+</a>
-{#                    <ul class="products__list">#}
-{#                        <li class="products__item"><a href="" class="products__a">Одежда</a></li>#}
-{#                        <li class="products__item"><a href="" class="products__a">Одежда</a></li>#}
-{#                        <li class="products__item"><a href="" class="products__a">Одежда</a></li>#}
-{#                        <li class="products__item"><a href="" class="products__a">Одежда</a></li>#}
-{#                    </ul>#}
+                    {#                    <ul class="products__list">#}
+                    {#                        <li class="products__item"><a href="" class="products__a">Одежда</a></li>#}
+                    {#                        <li class="products__item"><a href="" class="products__a">Одежда</a></li>#}
+                    {#                        <li class="products__item"><a href="" class="products__a">Одежда</a></li>#}
+                    {#                        <li class="products__item"><a href="" class="products__a">Одежда</a></li>#}
+                    {#                    </ul>#}
                 </li>
-                <li class="h-menu__item">
+
+                <li class="h-menu__item" id="about">
                     <a href="{% url "show_about" %}" class="h-menu__link">О нас</a>
                 </li>
-                <li class="h-menu__item">
+
+                <li class="h-menu__item"  id="contacts">
                     <a href="{% url "show_contacts" %}" class="h-menu__link">Контакты</a>
                 </li>
-                <li class="h-menu__item" style="display: flex;align-items: center">
-                    <a href="{% url "show_bucket" %}" class="h-menu__link">
-                        Корзина
-                        <img src="{% static "img/Shopping-cart.png" %}" alt="" class="cart__img">
-                    </a>
-                </li>
+
+                {% if request.user.is_authenticated %}
+
+                    <li class="h-menu__item"  id="bucket">
+                        <a href="{% url "show_bucket" %}" class="h-menu__link">
+                            Корзина
+                            <img src="{% static "img/Shopping-cart.png" %}" alt="" class="cart__img">
+                        </a>
+
+                    </li>
+
+                    <li class="h-menu__item"  id="logout">
+                        <a href="{% url "show_sign_out" %}" class="h-menu__link">
+                            Выход
+                        </a>
+                    </li>
+
+                {% else %}
+
+                    <li class="h-menu__item"  id="login">
+                        <a href="{% url "show_sign_in" %}" class="h-menu__link">
+                            Вход
+                        </a>
+                    </li>
+
+                {% endif %}
+
             </ul>
         </nav>
 
     </div>
+
 </header>
+

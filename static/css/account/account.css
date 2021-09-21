@@ -35,28 +35,17 @@ header {
 
 }
 
-.block1__link_active {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 123%;
-    color: black;
-    border-bottom: black solid 2px;
-
-}
-
-.block1__link_inactive {
+.block1__link{
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
     line-height: 123%;
     color: #EFEFEF;
-    border: black;
-
+    border: none;
 
 }
+
 
 @media (max-width: 467px) {
     .block1__link_active {
@@ -113,14 +102,11 @@ header {
 }
 
 
-.block2__login_active {
+.block2__login {
 
 }
 
-.block2__login_inactive {
-    display: none;
 
-}
 
 .login__button {
     max-width: 300px;
@@ -138,18 +124,14 @@ header {
     background: #EFEFEF;
 }
 
-.block2__registration_active {
+.block2__registration {
 
 
 }
 
-.block2__registration_inactive {
-    display: none;
 
-}
 
-.registration
-__button {
+.registration__button {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;

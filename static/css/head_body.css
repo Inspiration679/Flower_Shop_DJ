@@ -139,7 +139,16 @@ header {
 }
 
 .h-menu__item:not(:last-child) {
-    margin-right: 75px;
+    margin-right: 72px;
+}
+h-menu__item_long {
+    text-align: left;
+
+
+}
+
+.h-menu__item_long:not(:last-child) {
+    margin-right: 40px;
 }
 
 .h-menu__link {

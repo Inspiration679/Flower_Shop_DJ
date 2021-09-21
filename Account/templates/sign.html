@@ -1,0 +1,34 @@
+{% extends "body.html" %}
+{% block all %}
+    <div class="wrapper">
+        {% include "header.html" %}
+        <main>
+            <div class="block1">
+                <div class="block1__container _container">
+                    <div class="block1__body">
+                        <ul class="block1__list">
+                            <li class="block1__item ">
+                                <a href="{% url "show_sign_in" %}" id="log_click" class="block1__link class1"
+                                >Вход</a>
+                            </li>
+                            <li class="block1__item">
+                                <a href="{% url "show_sign_up" %}" id="reg_click" class="block1__link class2"
+                                >Регистрация</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="block2">
+                <div class="block2__container _container">
+                    <div class="block2__body">
+                        {% block content %}
+
+                        {% endblock content %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% include "footer.html" %}
+    </div>
+{% endblock all %}

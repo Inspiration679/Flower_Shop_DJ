@@ -15,15 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Main_page import views
+from Home import views
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('bucket/', include("Bucket.urls")),
     path('contacts/',include("Contacts.urls")),
-    path("",views.ShowMainPage,name="Home"),
+    path("", views.ShowHome, name="show_home"),
     path('products/', include("Products.urls")),
     path("about/",include("About.urls")),
-    path("sign/",include("Login_Registration.urls"))
+    path("sign/", include("Account.urls"))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
