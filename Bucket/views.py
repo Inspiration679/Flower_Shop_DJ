@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.views import View
+from Home.views import MixinView
+
 
 # Create your views here.
-def showBucket(request):
-    return render(request,"bucket.html",{"title":"Bucket","path":"css/Home/style.css"})
+class showBucket(MixinView, View):
+    template = "bucket.html"
+    context = {"title": "Bucket", "path": "css/Home/style.css"}

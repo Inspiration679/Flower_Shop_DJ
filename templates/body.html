@@ -2,19 +2,28 @@
 <html lang="en">
 {% include "head.html" %}
 <body>
-    {% block all %}
+<div class="wrapper">
 
-    {% endblock all %}
+    {% include "header.html" %}
 
-    <script src="/static/js/app.js"></script>
+    <main>
+        {% block all %}
+        {% endblock all %}
+    </main>
 
-    {% if request.user.is_authenticated %}
+    {% include "footer.html" %}
 
-        <script>
-            document.querySelector("#home,#about,#login,#logout,#contacts,#bucket").classList.remove('h-menu__item');
-            document.querySelector("#home,#about,#login,#logout,#contacts,#bucket").classList.add('h-menu__item_long');
-        </script>
-    {% endif %}
+</div>
+
+<script src="/static/js/app.js"></script>
+
+{#    {% if request.user.is_authenticated %}#}
+{##}
+{#        <script>#}
+{#            document.querySelector("#home,#about,#login,#logout,#contacts,#bucket").classList.remove('h-menu__item');#}
+{#            document.querySelector("#home,#about,#login,#logout,#contacts,#bucket").classList.add('h-menu__item_long');#}
+{#        </script>#}
+{#    {% endif %}#}
 
 </body>
 

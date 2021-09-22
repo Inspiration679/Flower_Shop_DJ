@@ -139,7 +139,7 @@ header {
 }
 
 .h-menu__item:not(:last-child) {
-    margin-right: 72px;
+    margin-right: 100px;
 }
 h-menu__item_long {
     text-align: left;
@@ -201,8 +201,8 @@ footer {
 
 .footer__container {
 
-    padding-bottom: 2%;
-    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-top: 1%;
 
     display: flex;
     align-items: center;
@@ -213,7 +213,7 @@ footer {
 }
 
 .f-menu {
-    margin-left: 11%;
+    margin-left: 10%;
 }
 
 .f-menu__list {
@@ -227,7 +227,7 @@ footer {
 
 .f-menu__item:not(:last-child) {
 
-    margin-right: 80px;
+    margin-right: 85px;
 }
 
 .f-menu__link {
@@ -243,7 +243,7 @@ footer {
 }
 
 .f-menu-links {
-    margin-left: 7%;
+    margin-left: 10.5%;
 }
 
 .f-m-links__list {
@@ -256,7 +256,7 @@ footer {
 }
 
 .f-m-links__item:not(:last-child) {
-    margin-right: 18px;
+    margin-right: 25px;
 
 }
 

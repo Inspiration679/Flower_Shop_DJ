@@ -1,49 +1,42 @@
 {% extends "body.html" %}
 {% load static %}
 {% block all %}
-    <div class="wrapper">
-        {% include "header.html" %}
-        <main class="">
-            <div class="block1">
-                <div class="block1__container _container">
-                    <div class="block1__body">
-                        <div class="block1__text__button">
-                            <h1 class="block1__h">Цветы не решают всех проблем, но они - хорошее начало</h1>
-                            <p class="block1__p">Выберите цветочек уже сейчас и наслаждайтесь его цветением долгие
-                                годы</p>
-                            <a href="{% url "show_products" %}">
-                                <button type="submit" class="block1__button">Приобрести цветочки</button>
-                            </a>
-                        </div>
-                        <img src="{% static "img/Block1_image.png" %}" alt="" class="block1__image">
-                    </div>
+    <div class="block1">
+        <div class="block1__container _container">
+            <div class="block1__body">
+                <div class="block1__text__button">
+                    <h1 class="block1__h">Цветы не решают всех проблем, но они - хорошее начало</h1>
+                    <p class="block1__p">Выберите цветочек уже сейчас и наслаждайтесь его цветением долгие
+                        годы</p>
+                    <a href="{% url "show_products" %}">
+                        <button type="submit" class="block1__button">Приобрести цветочки</button>
+                    </a>
                 </div>
-                <div class="_ibg background__img">
-                    <img src="{% static "img/Background.png" %} " alt="" class="">
-                </div>
+                <img src="{% static "img/Block1_image.png" %}" alt="" class="block1__image">
             </div>
-            <div class="block2">
-                <div class="block2__container _container">
-                    <div class="block2__body">
-                        <p class="block2__p">
-                            Цветы используются для выражения любви, печали, горя, печали, и даже благодарности. Они
-                            могут
-                            выразить те чувства, которые трудно выразить словами. Розы стали символом романтических
-                            отношений между парами. Букет из красных роз - самый популярный подарок, передающий теплоту
-                            чувств. Помимо того, что цветы используются для художественного оформления помещений, они
-                            используются для улучшения настроения. Они магическим образом освежают атмосферу,
-                            успокаивают
-                            нервы, наполняют помещение ароматом.
-                        </p>
-                        <img src="{% static "img/Block2_image.png" %}" alt=""
-                             class="block2__image">
-                    </div>
-                </div>
-            </div>
-        </main>
-        {% include "footer.html" %}
+        </div>
+        <div class="_ibg background__img">
+            <img src="{% static "img/Background.png" %} " alt="" class="">
+        </div>
     </div>
-
+    <div class="block2">
+        <div class="block2__container _container">
+            <div class="block2__body">
+                <p class="block2__p">
+                    Цветы используются для выражения любви, печали, горя, печали, и даже благодарности. Они
+                    могут
+                    выразить те чувства, которые трудно выразить словами. Розы стали символом романтических
+                    отношений между парами. Букет из красных роз - самый популярный подарок, передающий теплоту
+                    чувств. Помимо того, что цветы используются для художественного оформления помещений, они
+                    используются для улучшения настроения. Они магическим образом освежают атмосферу,
+                    успокаивают
+                    нервы, наполняют помещение ароматом.
+                </p>
+                <img src="{% static "img/Block2_image.png" %}" alt=""
+                     class="block2__image">
+            </div>
+        </div>
+    </div>
 {% endblock all %}
 
 
