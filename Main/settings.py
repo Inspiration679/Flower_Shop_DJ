@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "productdb",
+        'NAME': "shopdb",
         "PASSWORD": "",
         "PORT": "3306",
         "USER": "root",
