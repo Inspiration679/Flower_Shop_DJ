@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "shopdb",
-        "PASSWORD": "Taras679",
-        "PORT": "5432",
-        "USER": "postgres",
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "productdb",
+        "PASSWORD": "",
+        "PORT": "3306",
+        "USER": "root",
         "HOST": "localhost"
     }
 }

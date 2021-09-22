@@ -1,6 +1,9 @@
-from django.shortcuts import render
-
+from django.views import View
+from Main.views import MixinView
 
 # Create your views here.
-def showContacts(request):
-    return render(request, "contacts.html",{"title":"Contacts","path":"css/contacts/contacts.css"})
+
+
+class showContacts(MixinView, View):
+    context = {"title": "Contacts", "path": "css/contacts/contacts.css"}
+    template = "contacts.html"
