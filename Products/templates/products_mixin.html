@@ -1,7 +1,5 @@
 {% extends "body.html" %}
-{% load static %}
 {% block all %}
-
     <div class="block1">
         <div class="block1__container _container">
             <div class="block1__body">
@@ -22,19 +20,10 @@
     <div class="block2">
         <div class="block2__container _container">
             <div class="block2__body">
-                {% for product in products.all %}
-                    <a href="{{ product.get_absolute_url }}%}">
-                        <div class="block2__item">
-                            <div class="block2__itm-content">
-                                <img src="{{ product.image.url }}" alt="" class="block2__itm-img">
-                                <p class="block2__itm-p">{{ product.title }}</p>
-                            </div>
-                        </div>
-                    </a>
-                {% endfor %}
+                {% block content %}
+
+                {% endblock content %}
             </div>
         </div>
     </div>
-
 {% endblock all %}
-

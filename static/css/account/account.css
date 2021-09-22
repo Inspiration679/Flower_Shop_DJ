@@ -35,7 +35,7 @@ header {
 
 }
 
-.block1__link{
+.block1__link {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -107,7 +107,6 @@ header {
 }
 
 
-
 .login__button {
     max-width: 300px;
     width: 100%;
@@ -128,7 +127,6 @@ header {
 
 
 }
-
 
 
 .registration__button {

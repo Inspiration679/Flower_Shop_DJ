@@ -141,6 +141,7 @@ header {
 .h-menu__item:not(:last-child) {
     margin-right: 100px;
 }
+
 h-menu__item_long {
     text-align: left;
 
@@ -293,47 +294,47 @@ footer {
 
 }
 
-/*!* параметры выпадающего списка *!*/
-/*.products__list {*/
+/* параметры выпадающего списка */
+.products__list {
 
-/*    background-color: rgba(0, 0, 0, 0.5);*/
+    background-color: rgba(0, 0, 0, 0.5);
 
-/*    position: absolute;*/
+    position: absolute;
 
-/*    display: none;*/
-/*    top: 100%;*/
+    display: none;
+    top: 100%;
 
-/*    min-width: 150px;*/
-/*    padding-top: 10px;*/
-/*    padding-bottom: 10px;*/
-/*}*/
+    min-width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
-/*!* отображаем выпадающий список при наведении *!*/
-/*.h-menu__item:hover > .products__list {*/
+/* отображаем выпадающий список при наведении */
+.h-menu__item:hover > .products__list {
 
-/*    display: inherit;*/
-/*}*/
+    display: inherit;
+}
 
-/*.hi:hover {*/
-/*    background-color: rgba(0, 0, 0, 0.5);*/
-/*}*/
+.hi:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
-/*!* первый уровень выпадающего списка *!*/
-/*.products__item {*/
-/*    font-family: 'Montserrat', sans-serif;*/
-/*    color: black;*/
-/*    float: none;*/
-/*    font-size: 20px;*/
-/*    position: relative;*/
-/*    padding-left: 20px;*/
+/* первый уровень выпадающего списка */
+.products__item {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    float: none;
+    font-size: 20px;
+    position: relative;
+    padding-left: 20px;
 
 
-/*}*/
+}
 
-/*.products__item:not(:last-child) {*/
-/*    margin-bottom: 15px;*/
-/*}*/
+.products__item:not(:last-child) {
+    margin-bottom: 15px;
+}
 
-/*.products__a {*/
-/*    color: white;*/
-/*}*/
+.products__a {
+    color: white;
+}
