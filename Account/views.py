@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import SignUpForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
-
+from Cart.models import UserCart
 
 def SignIn(request):
     sign_in = AuthenticationForm()
@@ -36,8 +36,11 @@ def SignUp(request):
 
         if sign_up.is_valid():
             new_user = sign_up.save(commit=False)
+
             new_user.set_password(sign_up.cleaned_data['password'])
             new_user.save()
+            new_cart=UserCart.objects.create(cart_slug=new_user.id,user_name=new_user.username)
+            new_cart.save()
             return redirect("show_sign_in")
         else:
             context.update({"sign_up": sign_up})

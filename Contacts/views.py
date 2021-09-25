@@ -1,6 +1,7 @@
 from django.views import View
 from Main.views import MixinView
 
+
 # Create your views here.
 
 

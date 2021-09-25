@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
 
     "About.apps.AboutConfig",
-    "Bucket.apps.BucketConfig",
+    "Cart.apps.BucketConfig",
     "Contacts.apps.ContactsConfig",
     "Home.apps.HomeConfig",
     "Products.apps.FlowersConfig",
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "shopdb",
+        'NAME': "shop_main_db",
         "PASSWORD": "",
         "PORT": "3306",
         "USER": "root",

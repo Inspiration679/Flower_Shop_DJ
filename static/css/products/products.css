@@ -82,7 +82,9 @@ header {
 
 .block2__itm-img {
     width: 100%;
-    height: 100%;
+    max-width: 270px;
+    height: auto;
+    max-height: 270px;
 }
 
 .block2__itm-p {

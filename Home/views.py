@@ -4,7 +4,12 @@ from Main.views import MixinView
 
 
 # Create your views here.
-
-class ShowHome(MixinView, View):
+def ShowHome(request):
     template = "home.html"
     context = {"title": "Home", "path": "css/home/Home.css"}
+
+    return render(request,template,context)
+# class ShowHome(MixinView, View):
+#
+#     template = "home.html"
+#     context = {"title": "Home", "path": "css/home/Home.css"}

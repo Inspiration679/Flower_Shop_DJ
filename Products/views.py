@@ -1,23 +1,35 @@
-from django.shortcuts import get_object_or_404
-from .models import Products,ProductsTags
+from .models import Products, ProductsTags
 from django.views import View
-from Main.views import MixinView,MixinNeededView
+from Main.views import MixinView, MixinNeededView
+from django.shortcuts import redirect
+from Cart.models import CartItem, UserCart
+from django.core.exceptions import ObjectDoesNotExist
 
 
-class showProducts(MixinView, View):
+class ShowProducts(MixinView, View):
     template = "all_products.html"
     context = {"title": "Products", "path": "css/products/products.css", "all_path": "css/head_body.css",
                "products": Products.objects}
 
 
-class ShowNeededProduct(MixinNeededView,View):
+class ShowNeededProduct(MixinNeededView, View):
     template = "product_page.html"
     context = {"path": "css/products/product_page.css", }
     model = Products
 
 
-
-class ShowNeededTag(MixinNeededView,View):
+class ShowNeededTag(MixinNeededView, View):
     template = "tag_products.html"
     context = {"path": "css/products/products.css", }
     model = ProductsTags
+
+
+def add_to_card(request):
+    try:
+        CartItem.objects.get(user__user_name__iexact=request.user.username,
+                                           products_id__exact=request.GET["id"])
+    except ObjectDoesNotExist:
+        add_product = CartItem.objects.create(products=Products.objects.get(id=request.GET["id"]), count=1,username=request.user.username)
+        add_product.save()
+        add_product.user.add(UserCart.objects.get(user_name__iexact=request.user.username))
+    return redirect(request.GET["path"])
