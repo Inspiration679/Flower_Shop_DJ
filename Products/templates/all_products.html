@@ -1,7 +1,7 @@
 {% extends "products_mixin.html" %}
 {% block content %}
     {% for product in products.all %}
-        <a href="{{ product.get_absolute_url }}%}">
+        <a href="{{ product.get_absolute_url }}">
             <div class="block2__item">
                 <div class="block2__itm-content">
                     <img src="{{ product.image.url }}" alt="" class="block2__itm-img">

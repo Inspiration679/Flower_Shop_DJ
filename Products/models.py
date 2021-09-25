@@ -13,7 +13,7 @@ class ProductsTags(models.Model):
         return self.title
 
     def get_absolut_url(self):
-        return reverse("tag_detail_url", kwargs={"slug": self.slug})
+        return reverse("productstags_detail_url", kwargs={"slug": self.slug})
 
 
 class Products(models.Model):
@@ -21,9 +21,11 @@ class Products(models.Model):
     title = models.CharField(max_length=300)
     tag = models.ManyToManyField(ProductsTags, related_name="products")
     slug = models.SlugField(max_length=30, unique=True)
+    price = models.PositiveSmallIntegerField()
 
-    def get_absolut_url(self):
-        return reverse("products_detail_url", kwargs={"slug": self.slug})
+
+    def get_absolute_url(self):
+        return reverse('show_necessary_product', kwargs={'slug': self.slug})
 
     def __str__(self):
         return self.title

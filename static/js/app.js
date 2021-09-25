@@ -17,8 +17,6 @@ function map() {
 }
 
 
-
-
 function Check() {
     document.querySelector("#home,#about,#login,#logout,#contacts,#bucket").classList.remove('h-menu__item');
     document.querySelector("#home,#about,#login,#logout,#contacts,#bucket").classList.add('h-menu__item_long');
@@ -26,5 +24,23 @@ function Check() {
 }
 
 
-
 map()
+
+function click_cart(product_id, url) {
+    console.log("running");
+    $.ajax({
+        url: url, // the endpoint
+        type: "GET", // http method
+        data: {
+            param_first: product_id,
+        }, // data sent with the get request
+
+        // handle a successful response
+        success:
+            function (result) {
+                $("#" + product_id).html(result);
+            }
+    });
+
+};
+

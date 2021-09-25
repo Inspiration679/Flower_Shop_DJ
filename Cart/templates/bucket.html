@@ -1,0 +1,45 @@
+{% extends "body.html" %}
+{% load static %}
+{% block all %}
+    <div class="block1" id="block1222">
+        <div class=" _container block1__container">
+            <div class="block1__body">
+                {% for cart in cart_products.user.all %}
+                    <div class="block1__item">a
+                        <img src="{{ cart.products.image.url }}" alt="" class="block1__img">
+                        <p class="block1__p">{{ cart.products.title }}</p>
+                        <div id="{{ cart.products.id }}">
+                            <span class="block1__span">{{ cart.get_price }}</span>
+                            <span class="block1__span">{{ cart.count }}</span>
+                        </div>
+                        <button name="button" onclick='click_cart({{ cart.products.id }},"add_item/")'><img
+                                src="{% static "img/add_shopping_cart_black_36dp.svg" %}" alt=""
+                                class="block1__icons">
+                        </button>
+                        <button name="button" onclick="click_cart({{ cart.products.id }},'remove_item/')"><img
+                                src="{% static "img/remove_circle_outline_black_36dp.svg" %}" alt=""
+                                class="block1__icons">
+                        </button>
+                        <form method="get" action="{% url "remove_cart" %}">
+                            <input type="hidden" name="id" value="{{ cart.products.id }}">
+                            <button name="button"><img
+                                    src="{% static "img/remove_shopping_cart_black_36dp.svg" %}" alt=""
+                                    class="block1__icons">
+                            </button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("pageshow", function (event) {
+            var historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+            if (historyTraversal) {
+                window.location.reload();
+            }
+        });
+    </script>
+{% endblock all %}
+
+
