@@ -3,11 +3,10 @@ from django.db import models
 from Products.models import Products
 
 
-# Create your models here.
-
+# Модель корзины юзера
 class UserCart(models.Model):
-    slug = models.SlugField()
-    user_name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True)
+    user_name = models.CharField(max_length=100, unique=True)
 
     def get_full_price(self):
         return sum([i.get_price() for i in self.user.all()])
@@ -16,9 +15,10 @@ class UserCart(models.Model):
         return self.user_name
 
 
+# Модель товара юзера в корзине
 class CartItem(models.Model):
     user = models.ManyToManyField(UserCart, blank=True, related_name="user")
-    products = models.ForeignKey(Products, blank=True, on_delete=models.CASCADE, unique=True)
+    products = models.ForeignKey(Products, blank=True, on_delete=models.CASCADE)
     count = models.PositiveSmallIntegerField()
     username = models.CharField(max_length=300)
 
@@ -26,4 +26,4 @@ class CartItem(models.Model):
         return self.count * self.products.price
 
     def __str__(self):
-        return f"{self.products.title}({self.username})"
+        return f"{self.username}({self.products.title})"

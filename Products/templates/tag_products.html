@@ -1,5 +1,7 @@
 {% extends "products_mixin.html" %}
-
+{% block title %}
+    <input type="submit" name="tag__title" value="{{ productstags.title }}">
+{% endblock title %}
 {% block content %}
     {% for product in productstags.products.all %}
         <a href="{{ product.get_absolute_url }}">
@@ -11,5 +13,5 @@
             </div>
         </a>
     {% endfor %}
-
 {% endblock content %}
+

@@ -2,30 +2,42 @@
 {% load static %}
 {% block all %}
 
-    <div class="main-block">
-        <div class="main-block__container _container">
-            <div class="main-block__body">
-                <div class="main-block__text">
-                    <h1 class="main-block__h">Контакты</h1>
-                    <ul class="main-block__list">
-                        <li class="main-block__item">
-                            Email: <a href="" class="main-block__a">Почта</a>
+    {#----Блок 1------------------------------------------------------------------------#}
+    <div class="block1">
+        {#----Контейнер блока 1------------------------------------------------------------------------#}
+        <div class="block1__container _container">
+
+            {#----Тело блока 1------------------------------------------------------------------------#}
+            <div class="block1__body">
+
+                {#----Текст------------------------------------------------------------------------#}
+                <div class="block1__text">
+                    <h1 class="bl1-text__h">Контакты</h1>
+
+                    {#---Список контактов------------------------------------------------------------------------#}
+                    <ul class="bl1-text__list">
+                        <li class="bl1-text__item">
+                            Email: <a href="" class="bl1-text__a">Почта</a>
                         </li>
-                        <li class="main-block__item">
+                        <li class="bl1-text__item">
                             Телефон: +380661549132
                         </li>
-                        <li class="main-block__item">
-                            Telegram: <a href="" class="main-block__a">Телеграм</a>
+                        <li class="bl1-text__item">
+                            Telegram: <a href="" class="bl1-text__a">Телеграм</a>
                         </li>
-                        <li class="main-block__item">
-                            Instagram: <a href="" class="main-block__a">Инстаграм</a>
+                        <li class="bl1-text__item">
+                            Instagram: <a href="" class="bl1-text__a">Инстаграм</a>
                         </li>
-                        <li class="main-block__item">
-                            Facebook: <a href="" class="main-block__a">Фейсбук</a>
+                        <li class="bl1-text__item">
+                            Facebook: <a href="" class="bl1-text__a">Фейсбук</a>
                         </li>
                     </ul>
+
                 </div>
-                <img src="{% static "img/Group 13 (1).svg" %}" alt="" class="main-block__image">
+
+                {#----Картинка------------------------------------------------------------------------#}
+                <img src="{% static "img/Group 13 (1).svg" %}" alt="" class="block1__image">
+
             </div>
         </div>
     </div>

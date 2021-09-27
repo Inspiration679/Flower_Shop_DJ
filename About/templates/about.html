@@ -2,28 +2,40 @@
 {% load static %}
 {% block all %}
 
-    <div class="main-block">
-        <div class="main-block__container _container">
-            <div class="main-block__body">
-                <div class="about-block">
-                    <h1 class="about-block__h">
+    {#----Блок 1------------------------------------------------------------------------#}
+    <div class="block1">
+
+        {#----Контейнер блока 1------------------------------------------------------------------------#}
+        <div class="block1__container _container">
+
+            {#----Тело блока 1------------------------------------------------------------------------#}
+            <div class="block1__body">
+
+                {#----О нас------------------------------------------------------------------------#}
+                <div class="block1__about">
+                    <h1 class="bl1-about__h">
                         О нас
                     </h1>
-                    <p class="about-block__p">
+                    <p class="bl1-about__p">
                         Пример текстаПример текстаПример текстаПример текстаПример текстаПример текста
                         Пример текстаПример текстаПример текстаПример текстаПример текстаПример текстаПример
                         текстаПример текстаПример текстаПример текстаПример текста
                         м
                     </p>
                 </div>
-                <div class="address-block">
-                    <h1 class="address-block__h">Адрес</h1>
-                    <p class="address-block__p">Адрес</p>
+
+                {#----Адресс------------------------------------------------------------------------#}
+                <div class="block1__address">
+                    <h1 class="bl1-address__h">Адрес</h1>
+                    <p class="bl1-address__p">Адрес</p>
                 </div>
-                <div class="map-block">
-                    <h1 class="map-block__h">Карта</h1>
+
+                {#----Карта------------------------------------------------------------------------#}
+                <div class="block1__map">
+                    <h1 class="bl1-map__h">Карта</h1>
                     <div id="mapid"></div>
                 </div>
+
             </div>
         </div>
     </div>

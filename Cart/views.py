@@ -1,51 +1,78 @@
 from .models import UserCart, CartItem
-from django.shortcuts import render, get_object_or_404
-from django.shortcuts import redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
+from time import sleep
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_GET
+from django.http import Http404
+from django.core.exceptions import ObjectDoesNotExist
 
 
-# Create your views here.
+# Отображение корзины
+@login_required(login_url="/sign/")
 def show_cart(request):
-    user_products = get_object_or_404(UserCart, id=request.user.id)
-
+    user_products = get_object_or_404(UserCart, user_name=request.user.username)
     template = "bucket.html"
     context = {"title": "Cart", "path": "css/cart/cart.css", "cart_products": user_products}
-
-    return render(request, template, context=context)
-
+    return render(request, template, context)
 
 
+# Добавление количества товара через аякс
+@require_GET
 def add_item(request):
-    if request.method == 'GET':
+    if request.GET.get('permission'):
         product_id = request.GET.get('param_first')
         adding = CartItem.objects.get(products__id=product_id, user__user_name__iexact=request.user.username)
         if adding.count < 9:
             adding.count += 1
             adding.save()
-        print("hui")
+            return HttpResponse(f'''
+                <p class="bl2-item__price">{adding.get_price()}</p>
+                <p class="bl2-item__count">{adding.count}</p>
 
-    return HttpResponse(f'''<div id="{adding.products.id}">
-<span class="block1__span">{adding.get_price()}</span>
-<span class="block1__span">{adding.count}</span>
-</div>''')
+               ''')
+    else:
+        raise Http404
 
 
+# Уменьшение количества товара через аякс
+@require_GET
 def remove_item(request):
-    if request.method == 'GET':
+    if request.GET.get('permission'):
         product_id = request.GET.get('param_first')
         removing = CartItem.objects.get(products__id=product_id, user__user_name__iexact=request.user.username)
         if removing.count > 1:
             removing.count -= 1
             removing.save()
-        print(removing.get_price())
+        return HttpResponse(f'''
+        <p class="bl2-item__price">{removing.get_price()}</p>
+        <p class="bl2-item__count">{removing.count}</p>
 
-    return HttpResponse(f'''<div id="{removing.products.id}">
-    <span class="block1__span">{removing.get_price()}</span>
-    <span class="block1__span">{removing.count}</span>
-    </div>''')
+       ''')
+    else:
+        raise Http404
 
 
+# Удаление товара из корзины
+@require_GET
 def remove_cart(request):
-    delete_cart = CartItem.objects.get(products__id=request.GET["id"], user__user_name__iexact=request.user.username)
-    delete_cart.delete()
-    return redirect("show_cart")
+    try:
+        delete_cart = CartItem.objects.get(products__id=request.GET["id"],
+                                           user__user_name__iexact=request.user.username)
+        delete_cart.delete()
+        return redirect("show_cart")
+    except ObjectDoesNotExist:
+        raise Http404
+
+
+# Получение окончательной цены
+@require_GET
+def get_full_price(request):
+    if request.GET.get('permission'):
+        sleep(0.02)
+        return HttpResponse(
+            f'''<span class="bl1-text__span" >
+    {get_object_or_404(UserCart, user_name=request.user.username).get_full_price()} грн
+    </span>''')
+    else:
+        raise Http404

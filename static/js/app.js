@@ -27,20 +27,33 @@ function Check() {
 map()
 
 function click_cart(product_id, url) {
-    console.log("running");
     $.ajax({
         url: url, // the endpoint
         type: "GET", // http method
         data: {
             param_first: product_id,
-        }, // data sent with the get request
-
-        // handle a successful response
+            permission: true
+        },
         success:
             function (result) {
+
                 $("#" + product_id).html(result);
             }
+
     });
+    $.ajax({
+        url: "get_full_price/", // the endpoint
+        type: "GET", // http method
+        data: {
+            permission: true
+        },
+        success:
+            function (result) {
+                $("#full_price").html(result);
+            }
+
+    });
+
 
 };
 

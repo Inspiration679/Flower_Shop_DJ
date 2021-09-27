@@ -1,3 +1,4 @@
+/* ----About------------------------------------------------------------------------ */
 
 header {
     background: linear-gradient(#000000, #ffffff);
@@ -5,74 +6,106 @@ header {
     position: relative;
 }
 
-.main-block__container {
-    padding-top: 3.41%;
-    padding-bottom: 10.59%;
-    text-align: center;
-
-
+/* ----Блок 1------------------------------------------------------------------------ */
+.block1 {
 }
 
-.main-block__body {
+/* ----Контейнер блока 1------------------------------------------------------------------------ */
+.block1__container {
+    padding-top: 2.08%;
+    padding-bottom: 5.45%;
+    text-align: center;
+}
+
+/* ----Тело блока 1------------------------------------------------------------------------ */
+.block1__body {
     display: inline-block;
     color: black;
-    max-width: 981px;
+    max-width: 970px;
     text-align: left;
     font-family: Montserrat;
 
 }
 
-.main-block__body p {
+/* ----Параметры p и h1------------------------------------------------------------------------ */
+.block1__body p {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 126%;
-
 }
 
-.main-block__body h1 {
+.block1__body h1 {
     font-style: normal;
     font-weight: normal;
     font-size: 55px;
     line-height: 122%;
-
 }
 
-.about-block {
-    margin-bottom: 8.56%;
-
+/* ----О нас------------------------------------------------------------------------ */
+.block1__about {
+    margin-bottom: 4.56%;
 }
 
-.about-block__h {
-
+.bl1-about__h {
 }
 
-.about-block__p {
-
+.bl1-about__p {
 }
 
-.address-block {
-    margin-bottom: 8.56%;
-
+/* ----Адресс------------------------------------------------------------------------ */
+.block1__address {
+    margin-bottom: 2.56%;
 }
 
-.address-block__h {
-
+.bl1__address {
 }
 
-.address-block__p {
-
+.bl1-address__p {
 }
 
-.map-block {
-
+/* ----Карта------------------------------------------------------------------------ */
+.bl1__map {
 }
 
-.main-block__h {
-
+.bl1-map__h {
 }
 
 #mapid {
     width: 100%;
     height: 374px;
+}
+
+/* ----Адаптив------------------------------------------------------------------------ */
+@media (max-width: 992px) {
+    .block1__body h1 {
+        font-size: 45px;
+    }
+
+    .block1__body p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 662px) {
+    .block1__body h1 {
+        font-size: 40px;
+    }
+
+    .block1__body p {
+        font-size: 20px;
+    }
+
+
+}
+
+@media (max-width: 467px) {
+    .block1__body h1 {
+        font-size: 24px;
+    }
+
+    .block1__body p {
+        font-size: 16px;
+    }
+
 }
