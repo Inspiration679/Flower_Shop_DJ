@@ -18,11 +18,14 @@ class ProductsTags(models.Model):
 
 class Products(models.Model):
     image = models.ImageField(upload_to="images/product_images/")
-    title = models.CharField(max_length=300)
-    tag = models.ManyToManyField(ProductsTags, related_name="products")
+    title = models.CharField(max_length=30, unique=True)
+    tag = models.ManyToManyField(ProductsTags, related_name="products", blank=True)
     slug = models.SlugField(max_length=30, unique=True)
     price = models.PositiveSmallIntegerField()
-
+    season = models.CharField(max_length=10)
+    composition = models.CharField(max_length=10)
+    brand = models.CharField(max_length=10)
+    size = models.PositiveSmallIntegerField()
 
     def get_absolute_url(self):
         return reverse('show_necessary_product', kwargs={'slug': self.slug})

@@ -1,33 +1,35 @@
+/* ----Contacts------------------------------------------------------------------------ */
 header {
     background: linear-gradient(#000000, #ffffff);
     border-bottom: 2px solid black;
     position: relative;
 }
 
-.main-block {
-
+/* ----Блок 1------------------------------------------------------------------------ */
+.block1 {
 }
 
-.main-block__container {
+/* ----Контейнер блока 1------------------------------------------------------------------------ */
+.block1__container {
     padding-top: 2.75%;
     text-align: center;
-    padding-bottom: 10%;
+    padding-bottom: 6%;
 }
 
-
-.main-block__body {
-
-
+/* ----Тело блока 1------------------------------------------------------------------------ */
+.block1__body {
     text-align: left;
     display: inline-flex;
 }
 
-.main-block__text {
+/* ----Текст------------------------------------------------------------------------ */
+.block1__text {
     width: auto;
     height: auto;
+    margin-right: 20px;
 }
 
-.main-block__h {
+.bl1-text__h {
     margin-bottom: 11.53%;
     font-family: 'Montserrat', sans-serif;
     font-size: 55px;
@@ -35,7 +37,10 @@ header {
     color: #000000;
 }
 
-.main-block__item {
+.bl1-text__list {
+}
+
+.bl1-text__item {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -44,33 +49,36 @@ header {
     color: #000000;
 }
 
-.main-block__item:not(:last-child) {
+.bl1-text__item:not(:last-child) {
     margin-bottom: 14%;
 }
 
-.main-block__a {
+.bl1-text__a {
     color: black;
 }
 
-.main-block__image {
-    margin-left: 20px;
+/* ----Картинка------------------------------------------------------------------------ */
+.block1__image {
 }
 
+/* ----Адаптив------------------------------------------------------------------------ */
 @media (max-width: 767px) {
-    .main-block__container {
+    .block1__container {
         text-align: left;
     }
 
-    .main-block__image {
+    .block1__image {
         display: none;
     }
 
 
-    .main-block__item {
-        font-size: 16px;
-    }
-
-    .main-block__h {
+    .bl1-text__h {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 467px) {
+    .bl1-text__item {
+        font-size: 20px;
     }
 }

@@ -17,8 +17,50 @@
             </div>
         </div>
     </div>
+
     <div class="block2">
+
         <div class="block2__container _container">
+        <form action="{% url "show_filter" %}" method="get">
+        <select name="size">
+            <option selected="selected" value="all">Objects on page:</option>
+            <option value="11">11</option>
+            <option value="20">20</option>
+            <option value="34">34</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        </select>
+
+        <select name="season">
+            <option selected="selected" value="all" >Objects on page:</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="winter">winter</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        </select>
+        <select name="composition">
+
+            <option selected="selected" value="all" >Objects on page:</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="winter">winter</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        </select>
+        <select name="brand">
+
+            <option selected="selected" value="all" >Objects on page:</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="winter">winter</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+        </select>
+        {% block title %}
+
+        {% endblock title %}
+    </form>
             <div class="block2__body">
                 {% block content %}
 

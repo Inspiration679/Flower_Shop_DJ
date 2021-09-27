@@ -10,7 +10,6 @@
 
 a {
     text-decoration: none;
-
 }
 
 a:hover {
@@ -25,7 +24,6 @@ li {
 
 img {
     vertical-align: top;
-
 }
 
 h1,
@@ -44,7 +42,6 @@ body {
 
 html,
 body {
-
     background-color: white;
     height: 100%;
     line-height: 1;
@@ -58,8 +55,6 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-
-
 }
 
 /* ----Main------------------------------------------------------------------------ */
@@ -75,8 +70,6 @@ main {
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: content-box;
-
-
 }
 
 ._ibg {
@@ -90,7 +83,6 @@ main {
     top: 0;
     left: 0;
     object-fit: cover;
-
 }
 
 /* ----Header------------------------------------------------------------------------ */
@@ -101,7 +93,6 @@ header {
     top: 0;
     width: 100%;
     background-color: black;
-
 }
 
 .header__container {
@@ -110,12 +101,9 @@ header {
     padding-top: 1%;
     padding-bottom: 1%;
     min-height: 93px;
-
 }
 
 .header__logo {
-
-
 }
 
 .h-menu {
@@ -127,25 +115,18 @@ header {
     align-items: center;
     flex-wrap: wrap;
     position: relative;
-
-
 }
-
 
 .h-menu__item {
     text-align: left;
-
-
 }
 
 .h-menu__item:not(:last-child) {
-    margin-right: 100px;
+    margin-right: 101px;
 }
 
 h-menu__item_long {
     text-align: left;
-
-
 }
 
 .h-menu__item_long:not(:last-child) {
@@ -160,15 +141,11 @@ h-menu__item_long {
     line-height: 185%;
     color: #FFFFFF;
     text-align: left;
-
-
 }
 
 @media (max-width: 992px) {
-
     .cart__img {
         display: none;
-
     }
 
     .header__logo {
@@ -176,12 +153,9 @@ h-menu__item_long {
         height: auto;
         min-width: 100px;
     }
-
 }
 
 @media (max-width: 467px) {
-
-
     .h-menu__link {
         font-size: 15px;
     }
@@ -189,28 +163,22 @@ h-menu__item_long {
     .h-menu__item:not(:last-child) {
         margin-right: 4%;
     }
-
-
 }
 
 /* ----Footer------------------------------------------------------------------------ */
 
 footer {
     background-color: black;
-
 }
 
 .footer__container {
-
     padding-bottom: 1%;
     padding-top: 1%;
-
     display: flex;
     align-items: center;
 }
 
 .footer__logo {
-
 }
 
 .f-menu {
@@ -223,11 +191,9 @@ footer {
 }
 
 .f-menu__item {
-
 }
 
 .f-menu__item:not(:last-child) {
-
     margin-right: 85px;
 }
 
@@ -239,8 +205,6 @@ footer {
     line-height: 185%;
     color: #FFFFFF;
     text-align: left;
-
-
 }
 
 .f-menu-links {
@@ -258,15 +222,12 @@ footer {
 
 .f-m-links__item:not(:last-child) {
     margin-right: 25px;
-
 }
 
 .f-m-links__link {
-
 }
 
 .f-m-links__img {
-
 }
 
 
@@ -279,7 +240,6 @@ footer {
 }
 
 @media (max-width: 467px) {
-
     .f-menu__link {
         font-size: 15px;
     }
@@ -291,50 +251,16 @@ footer {
     .f-m-links__item:not(:last-child) {
         margin-right: 1%;
     }
-
 }
 
 /* параметры выпадающего списка */
 .products__list {
-
     background-color: rgba(0, 0, 0, 0.5);
-
     position: absolute;
-
     display: none;
     top: 100%;
-
     min-width: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-/* отображаем выпадающий список при наведении */
-.h-menu__item:hover > .products__list {
-
-    display: inherit;
-}
-
-.hi:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* первый уровень выпадающего списка */
-.products__item {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    float: none;
-    font-size: 20px;
-    position: relative;
-    padding-left: 20px;
-
-
-}
-
-.products__item:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-.products__a {
-    color: white;
-}

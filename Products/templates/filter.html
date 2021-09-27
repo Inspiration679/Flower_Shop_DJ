@@ -1,7 +1,7 @@
 {% extends "products_mixin.html" %}
 {% block title %}
-    <input type="submit" name="tag__title" value="all">
-{% endblock title %}
+        <input type="submit" name="tag__title" value="{{ tag__title }}">
+    {% endblock title %}
 {% block content %}
 
     {% for product in products.all %}

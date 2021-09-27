@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-&0a%)a!0akjvx!)=3yd7o@xq7@vdpfd3_u*zc63uo=ga!g8!y9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'Main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "shop_main_db",
+        'NAME': "last_db",
         "PASSWORD": "",
         "PORT": "3306",
         "USER": "root",
@@ -113,7 +114,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
@@ -137,3 +139,4 @@ MEDIA_URL = "/my_media/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

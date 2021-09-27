@@ -4,6 +4,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate, logout
 from Cart.models import UserCart
 
+
 def SignIn(request):
     sign_in = AuthenticationForm()
     template = "signIn.html"
@@ -39,7 +40,7 @@ def SignUp(request):
 
             new_user.set_password(sign_up.cleaned_data['password'])
             new_user.save()
-            new_cart=UserCart.objects.create(cart_slug=new_user.id,user_name=new_user.username)
+            new_cart = UserCart.objects.create(slug=new_user.id, user_name=new_user.username)
             new_cart.save()
             return redirect("show_sign_in")
         else:
