@@ -193,17 +193,15 @@ body {
 
 }
 
-@media (max-width: 552px) {
-
-    .block1__body {
-        justify-content: center;
-    }
-}
 
 @media (max-width: 467px) {
 
     .block1__text {
         font-size: 24px;
+    }
+
+    .block1__body {
+        justify-content: center;
     }
 }
 

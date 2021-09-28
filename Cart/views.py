@@ -2,19 +2,23 @@ from .models import UserCart, CartItem
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from time import sleep
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.views.decorators.http import require_GET
 from django.http import Http404
 from django.core.exceptions import ObjectDoesNotExist
+from django.views import View
+from django.utils.decorators import method_decorator
 
 
 # Отображение корзины
-@login_required(login_url="/sign/")
-def show_cart(request):
-    user_products = get_object_or_404(UserCart, user_name=request.user.username)
+class ShowCart(View):
     template = "bucket.html"
-    context = {"title": "Cart", "path": "css/cart/cart.css", "cart_products": user_products}
-    return render(request, template, context)
+    context = {"title": "Cart", "path": "css/cart/cart.css"}
+
+    @method_decorator(login_required(login_url="/sign/"))
+    def get(self, request):
+        self.context.update({"cart_products": get_object_or_404(UserCart, user_name=request.user.username)})
+        return render(request, self.template, self.context)
 
 
 # Добавление количества товара через аякс
@@ -26,11 +30,11 @@ def add_item(request):
         if adding.count < 9:
             adding.count += 1
             adding.save()
-            return HttpResponse(f'''
-                <p class="bl2-item__price">{adding.get_price()}</p>
-                <p class="bl2-item__count">{adding.count}</p>
+        return HttpResponse(f'''
+            <p class="bl2-item__price">{adding.get_price()}</p>
+            <p class="bl2-item__count">{adding.count}</p>
 
-               ''')
+           ''')
     else:
         raise Http404
 
@@ -48,7 +52,7 @@ def remove_item(request):
         <p class="bl2-item__price">{removing.get_price()}</p>
         <p class="bl2-item__count">{removing.count}</p>
 
-       ''')
+           ''')
     else:
         raise Http404
 
