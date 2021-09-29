@@ -1,17 +1,18 @@
-
+/* ----Блок------------------------------------------------------------------------ */
 .block1 {
-
     position: relative;
     font-family: Roboto;
 }
 
-.block1__container {
-    padding-bottom: 130px;
-    padding-top: 200px;
-    text-align: center;
 
+/* ----Контейнер блока1------------------------------------------------------------------------ */
+.block1__container {
+    padding-top: 200px;
+    padding-bottom: 2.1%;
+    text-align: center;
 }
 
+/* ----Тело блока1------------------------------------------------------------------------ */
 .block1__body {
     position: relative;
     z-index: 2;
@@ -19,60 +20,60 @@
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-
-
 }
 
+/* ----Секция текста и кнопки блока 1------------------------------------------------------------------------ */
 .block1__text__button {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    max-width: 400px;
+    color: white;
+    font-weight: 300;
+    font-family: "Roboto";
 }
 
-.block1__h {
-    max-width: 400px;
-    font-style: normal;
-    font-weight: 300;
+/* ----Заголовок секции текста и кнопки блока 1------------------------------------------------------------------------ */
+.bl1-text-button__h {
+    text-shadow: 3px 2px 2px black;
     font-size: 36px;
     line-height: 100%;
-    padding-top: 75px;
-    color: white;
-
+    padding-top: 18.75%;
 
 }
 
-.block1__p {
+/* ----Текст секции текста и кнопки блока 1------------------------------------------------------------------------ */
+.bl1-text-button__p {
+    text-shadow: 3px 2px 2px black;
     padding: 6% 0;
-    max-width: 400px;
-    font-style: normal;
-    font-weight: 300;
     font-size: 24px;
     line-height: 116%;
-    color: white;
 }
 
-.block1__button {
-
+/* ----Кнопка секции текста и кнопки блока 1------------------------------------------------------------------------ */
+.bl1-text-button__button {
     background: #FFFFFF;
     border-radius: 50px;
     font-size: 24px;
     font-weight: 300;
     line-height: 116%;
-    outline: none;
+    border: 1px black solid;
     text-align: center;
     text-decoration: none;
     padding: 10px 40px;
-    font-family: Roboto;
-    margin: 0 0 20px 0px;
+    margin-bottom: 3%;
+
 }
 
+.bl1-text-button__button:hover {
+    opacity: 0.9;
+}
+
+/* ----Картинка блока 1------------------------------------------------------------------------ */
 .block1__image {
-
 }
 
-.background__img {
+/* ----Картинка заднего фона блока 1------------------------------------------------------------------------ */
+.block1-background__img {
     z-index: 1;
     object-fit: cover;
     position: absolute;
@@ -82,38 +83,60 @@
     left: 0;
 }
 
-@media (max-width: 992px) {
-    .block1__body {
-        margin-left: 75px;
-    }
 
+/* ----Блок 2------------------------------------------------------------------------ */
+.block2 {
+}
+
+/* ----Контейнер блока 2------------------------------------------------------------------------ */
+.block2__container {
+    padding-top: 3.12%;
+    padding-bottom: 3.12%;
+}
+
+/* ----Тело блока 2----------------------------------------------------------------------- */
+.block2__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Roboto";
+}
+
+/* ----Текст блока 2------------------------------------------------------------------------ */
+.block2__p {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 110%;
+    color: #000000;
+    max-width: 643px;
+}
+
+/* ----Картинка блока 2------------------------------------------------------------------------ */
+.block2__image {
+}
+
+/* ----Адаптив------------------------------------------------------------------------ */
+@media (max-width: 992px) {
 
     .block1__image {
         width: 100%;
         height: 100%;
     }
 
-    .block1__button {
-        font-size: 18px;
-
-
+    .block1__text__button p, button {
+        font-size: 22px;
     }
 }
 
 @media (max-width: 767px) {
-    .block1__body {
-        margin-left: 50px;
-        align-items: center;
-    }
 
+    .block1__text__button p, button {
+        font-size: 20px;
+    }
 
 }
 
 @media (max-width: 467px) {
-    .block1__body {
-        margin-left: 0px;
-    }
-
 
     .block1__text__button p, button {
         font-size: 18px;
@@ -121,52 +144,19 @@
 
 
     .block1__text__button h1 {
-        font-size: 24px;
-        padding: 8px 30px
+        font-size: 22px;
     }
-}
 
-/* ----Main-Block2------------------------------------------------------------------------ */
-.block2 {
+    .block1__container {
+        padding-top: 170px;
+    }
 
-}
-
-.block2__container {
-    padding-top: 99px;
-    padding-bottom: 99px;
-
-}
-
-.block2__body {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.block2__p {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 28px;
-    line-height: 31px;
-    color: #000000;
-    max-width: 643px;
-}
-
-.block2__image {
-
-}
-
-@media (max-width: 467px) {
     .block2__image {
         width: 100%;
         height: 100%;
     }
 
     .block2__body p {
-        font-size: 20px;
+        font-size: 16px;
     }
-
-
 }
