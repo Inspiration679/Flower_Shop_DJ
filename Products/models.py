@@ -3,8 +3,7 @@ from django.shortcuts import reverse
 from django.db.models import ManyToManyField
 
 
-# Create your models here.
-
+# Модель категорий
 class ProductsTags(models.Model):
     title = models.CharField(max_length=300)
     slug = models.SlugField(unique=True)
@@ -16,6 +15,7 @@ class ProductsTags(models.Model):
         return reverse("productstags_detail_url", kwargs={"slug": self.slug})
 
 
+# Модель товара
 class Products(models.Model):
     image = models.ImageField(upload_to="images/product_images/")
     title = models.CharField(max_length=30, unique=True)
