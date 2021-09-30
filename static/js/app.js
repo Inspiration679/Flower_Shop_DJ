@@ -57,3 +57,18 @@ function click_cart(product_id, url) {
 
 };
 
+function add_to_cart(product_id, url) {
+    $.ajax({
+        url: url, // the endpoint
+        type: "GET", // http method
+        data: {
+            param_first: product_id,
+        },
+        success:
+            function (result) {
+                $("#add_to_cart").html(result);
+            }
+    });
+}
+
+

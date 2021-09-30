@@ -27,6 +27,7 @@ header {
 
 .block1__item {
 
+
 }
 
 .block1__item:not(:last-child) {
@@ -67,6 +68,7 @@ header {
 }
 
 .block2__item {
+     border-radius: 25px;
     margin-bottom: 5%;
 
     background: #EFEFEF;
