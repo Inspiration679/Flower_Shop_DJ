@@ -1,6 +1,6 @@
 from django.db import models
 
-from Products.models import Products
+from Products.models import Product
 
 
 # Модель корзины юзера
@@ -18,7 +18,7 @@ class UserCart(models.Model):
 # Модель товара юзера в корзине
 class CartItem(models.Model):
     user = models.ManyToManyField(UserCart, blank=True, related_name="user")
-    products = models.ForeignKey(Products, blank=True, on_delete=models.CASCADE)
+    products = models.ForeignKey(Product, blank=True, on_delete=models.CASCADE)
     count = models.PositiveSmallIntegerField()
     username = models.CharField(max_length=300)
 

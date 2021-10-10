@@ -11,13 +11,13 @@
             <div class="block1__body">
 
                 {# ----Картинка блока 1------------------------------------------------------------------------ #}
-                <img src="{{ products.image.url }}" class="block1__image" alt="">
+                <img src="{{ product.image.url }}" class="block1__image" alt="">
 
                 {# ----Секция текст и кнопок------------------------------------------------------------------------ #}
                 <div class="block1__text__buttons">
 
                     {# ----Название товара------------------------------------------------------------------------ #}
-                    <p class="bl1-txt-buttons__p">{{ products.title }}</p>
+                    <p class="bl1-txt-buttons__p">{{ product.title }}</p>
 
                     {# ----Инфо товара секции текста и кнопок------------------------------------------------------------------------ #}
                     <div class="bl1-txt-buttons__info">
@@ -39,16 +39,16 @@
 
                         <ul class="bl1-txt-buttons-info__list2">
                             <li class="bl1-txt-buttons-info__item">
-                                <p>{{ products.brand }}</p>
+                                <p>{{ product.brand }}</p>
                             </li>
                             <li class="bl1-txt-buttons-info__item">
-                                <p>{{ products.size }}</p>
+                                <p>{{ product.size }}</p>
                             </li>
                             <li class="bl1-txt-buttons-info__item">
-                                <p>{{ products.season }}</p>
+                                <p>{{ product.season }}</p>
                             </li>
                             <li class="bl1-txt-buttons-info__item">
-                                <p>{{ products.composition }}</p>
+                                <p>{{ product.composition }}</p>
                             </li>
                         </ul>
 
@@ -56,9 +56,9 @@
 
                     {# ----Кнопка добавить в корзину------------------------------------------------------------------------ #}
                     <div class="bl1-txt-buttons__add-to-cart " id="add_to_cart">
-                        <p>{{ products.price }}₴</p>
+                        <p>{{ product.price }}₴</p>
                         {% if user.is_authenticated %}
-                            <button class="" onclick=" add_to_cart( {{ products.id }},'add_to_cart/')">
+                            <button class="" onclick=" add_to_cart( {{ product.id }},'add_to_cart/')">
                                 Добавить в корзину
                             </button>
                         {% else %}

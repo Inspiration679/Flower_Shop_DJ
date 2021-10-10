@@ -1,17 +1,16 @@
 {% extends "products_mixin.html" %}
-{% block title %}
-    <input type="submit" name="tag__title" value="{{ productstags.title }}">
-{% endblock title %}
+
+{#----Кнопка------------------------------------------------------------------------#}
+{% block button %}
+    <div class="block2__button">
+        <button name="tag__title" value="{{ producttag.title }}">Поиск</button>
+    </div>
+{% endblock button %}
+
+{#----Цикл товар------------------------------------------------------------------------#}
 {% block content %}
-    {% for product in productstags.products.all %}
-        <a href="{{ product.get_absolute_url }}">
-            <div class="block2__item">
-                <div class="block2__itm-content">
-                    <img src="{{ product.image.url }}" alt="" class="block2__itm-img">
-                    <p class="block2__itm-p">{{ product.title }}</p>
-                </div>
-            </div>
-        </a>
+    {% for product in producttag.products.all %}
+        {% include "cycle.html" %}
     {% endfor %}
 {% endblock content %}
 
