@@ -14,6 +14,7 @@ class MixinNeededView:
     template = None
     context = None
     model = None
+    name=None
 
     def get(self, request, slug):
         obj = get_object_or_404(self.model, slug__iexact=slug)
