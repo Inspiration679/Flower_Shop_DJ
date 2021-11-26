@@ -13,7 +13,8 @@ class ShowProducts(MixinView, View):
     template = "all_products.html"
 
     context = {"title": "Products", "path": "css/products/products.css",
-               "products": Product.objects, "tags": ProductTag.objects.all(), "specs": Specification.objects.get()}
+               "products": Product.objects, "tags": ProductTag.objects.all(), "specs": Specification.objects.all()}
+
 
 
 # Отображение выбраного товара
@@ -27,7 +28,7 @@ class ShowNeededProduct(MixinNeededView, View):
 class ShowNeededTag(MixinNeededView, View):
     template = "tag_products.html"
     context = {"path": "css/products/products.css", "tags": ProductTag.objects.all(),
-               "specs": Specification.objects.get()}
+               "specs": Specification.objects.all()}
     model = ProductTag
 
 
@@ -60,6 +61,6 @@ def show_filtred_products(request):
     template = "filter.html"
     context = {"path": "css/products/products.css",
                "tag__title": request.GET["tag__title"], "tags": ProductTag.objects.all(),
-               "products": Product.objects.filter(**kwargs), "specs": Specification.objects.get()}
+               "products": Product.objects.filter(**kwargs), "specs": Specification.objects.all()}
 
     return render(request, template, context)

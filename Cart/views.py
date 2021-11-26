@@ -31,9 +31,8 @@ def add_item(request):
             adding.count += 1
             adding.save()
         return HttpResponse(f'''
-            <p class="bl2-item__price">{adding.get_price()}</p>
-            <p class="bl2-item__count">{adding.count}</p>
-
+            # <p class="bl2-item__price">{adding.get_price()}</p>
+            # <p class="bl2-item__count">{adding.count}</p>
            ''')
     else:
         raise Http404
